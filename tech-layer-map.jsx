@@ -1,29 +1,3 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import { useState, useMemo, useEffect, useCallback } from "react";
 
 const GITHUB_SEARCH_URL = "https://api.github.com/search/repositories";
@@ -164,7 +138,7 @@ layers.forEach(layer => {
   layer.techs.forEach(tech => { techLayerMap[tech.name] = layer.accent; });
 });
 
-export default function App() {
+export default function TechLayerMap() {
   const [selectedTech, setSelectedTech] = useState(null);
   const [hoveredLayer, setHoveredLayer] = useState(null);
   const [expandedLayer, setExpandedLayer] = useState(null);
